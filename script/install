@@ -6,3 +6,10 @@ cd "$(dirname "$0")/.."
 # --------
 
 dotnet restore
+
+if [ "${1}" != "--ci" ]; then
+
+  # Install required tools
+  dotnet tool install -g dotnet-format &>/dev/null
+
+fi

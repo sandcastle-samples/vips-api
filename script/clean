@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+cd "$(dirname "$0")/.."
+
+# --------
+
+rm -rf dist
+
+find . -name bin | xargs rm -rf
+find . -name obj | xargs rm -rf
+
+dotnet clean VipsApi.sln

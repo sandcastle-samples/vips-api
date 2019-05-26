@@ -1,16 +1,15 @@
-dotnet build
-dotnet test
+# VIPS API
 
-rm -rf dist
-mkdir dist
+> A test API for the NetVips library with native dependencies from Nuget
 
-cd VipsApi
-dotnet publish -r linux-x64 -c Release -o ../dist
-cd ..
+## Getting started
 
-
-docker build -t vipsapi .
-
-docker run --rm -it -d -p 5010:5010 vipsapi
-
-http "http://localhost:5010/api/v1/image?width=100&url=https%3A%2F%2Fvia.placeholder.com%2F300"
+* `sh script/clean` - cleans the solution files
+* `sh script/install` - sets up the initial dependencies after a git clone
+* `sh script/update` - updates the dependencies after a git pull or checkout
+* `sh script/build` - builds a production version of the software
+* `sh script/test` - runs the test suite
+* `sh script/package` - packages the application into a docker container
+* `sh script/deploy` - deploys the docker container
+* `sh script/server` - runs a local development server
+* `sh script/ci` - runs the ci scripts in order

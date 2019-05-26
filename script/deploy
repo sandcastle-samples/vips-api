@@ -5,6 +5,10 @@ cd "$(dirname "$0")/.."
 
 # --------
 
+export REPO_NAME="gcr.io/project-two-209503/vips-api"
+
+docker deploy push $REPO_NAME
+
 gcloud beta run deploy vips-api \
-  --image gcr.io/project-two-209503/vips-api \
-  --region australia-southeast1
+  --image $REPO_NAME \
+  --region us-central1
