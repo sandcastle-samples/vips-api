@@ -19,6 +19,18 @@ namespace VipsApi
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseUrls("http://0.0.0.0:" + GetPort())
                 .UseStartup<Startup>();
+
+        static string GetPort()
+        {
+            var port = Environment.GetEnvironmentVariable("PORT");
+            if (string.IsNullOrEmpty(port))
+            {
+                port = "5010";
+            }
+
+            return port;
+        }
     }
 }
