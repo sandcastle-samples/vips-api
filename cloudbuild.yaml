@@ -19,7 +19,7 @@ steps:
   args: ['push', 'gcr.io/project-two-209503/vips-api']
 
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'vips-api', '--image', 'gcr.io/project-two-209503/vips-api', '--region', 'australia-southeast1']
+  args: ['beta', 'run', 'deploy', 'vips-api', '--image', 'gcr.io/project-two-209503/vips-api', '--region', 'us-central1']
 
 images:
 - gcr.io/project-two-209503/vips-api
