@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+
+sh script/install
+sh script/test
+sh script/build
+sh script/package

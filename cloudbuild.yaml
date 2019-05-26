@@ -11,6 +11,10 @@ steps:
   entrypoint: 'sh'
   args: ['script/build']
 
+- name: 'mcr.microsoft.com/dotnet/core/sdk:2.2'
+  entrypoint: 'sh'
+  args: ['script/package']
+
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/project-two-209503/vips-api']
 

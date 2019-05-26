@@ -5,4 +5,6 @@ cd "$(dirname "$0")/.."
 
 # --------
 
-docker run --rm -it -d -p 5010:5010 vips-api
+gcloud beta run deploy vips-api \
+  --image gcr.io/project-two-209503/vips-api \
+  --region australia-southeast1

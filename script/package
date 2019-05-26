@@ -5,4 +5,4 @@ cd "$(dirname "$0")/.."
 
 # --------
 
-docker build -t vips-api .
+docker build -t gcr.io/project-two-209503/vips-api .
