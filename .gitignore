@@ -1,0 +1,83 @@
+syntax: glob
+
+# .Net
+.vs/
+*.obj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.scc
+*.vs10x
+*.orig
+*.dbmdl
+*.[Pp]ublish.xml
+*.iml
+*.nupkg
+[Bb]in
+[Db]ebug*/
+obj/
+[Rr]elease*/
+_ReSharper*/
+packages/
+tmp/
+.idea/
+
+# mac
+.DS_Store
+._.DS_Store
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+bin/
+Bin/
+obj/
+Obj/
+
+# Visual Studio
+.vs/
+/Properties/launchSettings.json
+
+# Rider
+.idea/
+*.iml
+
+# config
+*.vars
+appsettings.Development.json
+
+# artifacts
+dist/
+artifacts/
+_stock/
+
+# Settings
+appsettings.Development.json
