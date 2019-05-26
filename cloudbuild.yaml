@@ -1,12 +1,15 @@
 steps:
-- name: 'gcr.io/cloud-builders/dotnet'
-  args: ['sh', 'script/install']
+- name: 'mcr.microsoft.com/dotnet/core/sdk:2.2'
+  entrypoint: 'sh'
+  args: ['script/install']
 
-- name: 'gcr.io/cloud-builders/dotnet'
-  args: ['sh', 'script/test']
+- name: 'mcr.microsoft.com/dotnet/core/sdk:2.2'
+  entrypoint: 'sh'
+  args: ['script/test']
 
-- name: 'gcr.io/cloud-builders/dotnet'
-  args: ['sh', 'script/build']
+- name: 'mcr.microsoft.com/dotnet/core/sdk:2.2'
+  entrypoint: 'sh'
+  args: ['script/build']
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/project-two-209503/vips-api']
