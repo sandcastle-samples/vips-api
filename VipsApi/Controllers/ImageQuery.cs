@@ -11,5 +11,6 @@ namespace VipsApi.Controllers
         public string Url { get; set; }
         public string Format { get; set; }
         public bool Thumbnail { get; set; }
+        public int? Quality { get; set; }
     }
 }
